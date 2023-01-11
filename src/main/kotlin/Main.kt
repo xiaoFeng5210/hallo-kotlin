@@ -7,7 +7,14 @@ fun main(args: Array<String>) {
     test()
 }
 
-fun test() {
-    println("test")
+class Person(val name: String, var age: Int) {
+    val isAdult
+        get() = age >= 18
+
+    var age
+        set(value: Int) {
+            log(value);
+            field = value
+        }
 }
 
